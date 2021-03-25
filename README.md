@@ -31,3 +31,21 @@
 4) Extra points for adding eslint
 
 5) Extra point for adding unit tests
+
+******************************
+
+ PASS  src/reducers/items.test.js
+  ● Console
+
+    console.error node_modules/redux/lib/redux.js:325
+      Unexpected keys "loading", "error" found in previous state received by the reducer. Expected to find one of the known reducer keys instead: "items". Unexpected keys will be ignored.
+
+ PASS  src/selectors/selectors.test.js
+
+Test Suites: 2 passed, 2 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        5.984s
+Ran all test suites.
+
+
