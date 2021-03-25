@@ -1,15 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import configureStore from './store/configureStore';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/';
+import { itemsFetchData } from './actions/items';
+import ItemsContainer from './components/ItemsContainer';
 
-import ItemList from './components/ItemList';
-
-const store = configureStore();
+const store = createStore(rootReducer, applyMiddleware(thunk));
+store.dispatch(itemsFetchData('http://5af1eee530f9490014ead8c4.mockapi.io/items'))
 
 render(
     <Provider store={store}>
-        <ItemList />
+        <ItemsContainer />
     </Provider>,
     document.getElementById('app')
 );

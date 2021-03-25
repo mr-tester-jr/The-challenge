@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+section {
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+}
